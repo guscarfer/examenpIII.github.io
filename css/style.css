@@ -1,0 +1,961 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* Evita el desbordamiento horizontal */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transición suave para los cambios */
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Evitar desbordamiento horizontal */
+}
+header {
+    background-color: #5f5c58;
+   color: rgb(0, 0, 0);
+    padding: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    /* Asegura que esté por encima del contenido principal */
+    width: 100%;
+    /* Ancho completo del header */
+}
+.dark-mode header{
+    background-color: #000;
+    color: white;
+
+}
+.dark-mode footer{
+    background-color: #000;
+    color: white;
+ 
+}
+.titulo h1{
+    color: rgb(0, 0, 0);
+}
+.dark-mode .titulo h1{
+    color: #fffefe;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 60px;
+    order: 1;
+    /* Menú hamburguesa a la izquierda */
+}
+
+.header-logo {
+    order: 2;
+    padding-right: 20px;
+
+    /* Logo a la derecha */
+}
+
+.header-logo img {
+    width: 60px;
+
+    /* Ancho deseado del logo */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+
+}
+#menu {
+
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #5f5c58;
+    border: #ccc;
+    padding: 20px;
+    position: absolute;
+    top: calc(100% + 0px);
+    /* Ajusta esta posición según la altura del header */
+    left: 0;
+    border: 1px solid #000000;
+    z-index: 200;
+    /* Asegura que esté por encima del contenido principal */
+}
+.menu-item {
+    color: white;
+    padding: 10px;
+    background-color: #5f5c58;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    z-index: 200;
+    /* Asegura que esté por encima del contenido principal */
+    font-family: serif;
+}
+
+#imageOptions {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 10px;
+    background-color: #5f5c58;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(255, 246, 246, 0.1);
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.image-option {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.image-option button {
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: #554f4a;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.image-option button:hover {
+    background-color: #6e5841;
+}
+
+.menu-item:hover {
+
+    background-color: #554f4a;
+}
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.main-inicio {
+    background-image: url("../img/mainPrincipalClaro.png");
+}
+.dark-mode .main-inicio {
+    background-image: url("../img/mainPrincipalOscuro.png");
+}
+.main-simple {
+    background-image: url("../img/fondo\ blanco.png");
+}
+.main-deslizante {
+    background-image: url("../img/fondo\ blanco.png");
+}
+.main-mosaico {
+    background-image: url("../img/fondo\ blanco.png");
+}
+.main-luz {
+    background-image: url("../img/fondo\ blanco.png");
+}
+.main-biografia {
+    background-image: url("../img/fondoglobalclaro.png");
+}
+.main-sugerencia {
+    background-image: url("../img/fondoglobalclaro.png");
+}
+.main-servicios {
+    background-image: url("../img/fondoglobalclaro.png");
+}
+.dark-mode .main-simple {
+    background-image: url("../img/fondo\ oscuro.png");
+}
+.dark-mode .main-deslizante {
+    background-image: url("../img/fondo\ oscuro.png");
+}
+.dark-mode .main-mosaico {
+    background-image: url("../img/fondo\ oscuro.png");
+}
+.dark-mode .main-luz {
+    background-image: url("../img/fondo\ oscuro.png");
+}
+.dark-mode .main-biografia {
+    background-image: url("../img/fondoglobaloscuro.png");
+}
+.dark-mode .main-sugerencia {
+    background-image: url("../img/fondoglobaloscuro.png");
+}
+.dark-mode .main-servicios {
+    background-image: url("../img/fondoglobaloscuro.png");
+}
+
+
+/* Estilos para el footer */
+footer {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #5f5c58;
+    color: rgb(0, 0, 0);
+    padding: 10px 5px;
+    /* Reduce el padding para hacer el footer más pequeño */
+    width: 100%;
+    position: relative;
+    /* Fijar el footer en la parte inferior */
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    /* Asegurar que esté por encima del contenido */
+    margin-top: -80px;
+    /* Igual al margen inferior del main para evitar superposición */
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten automáticamente si no caben en una línea */
+    justify-content: center;
+    /* Alinear los elementos al centro */
+    align-items: center;
+}
+.footer-section {
+    flex: 1;
+    /* Ocupa el espacio disponible */
+    text-align: left;
+    /* Alinear el contenido a la izquierda */
+    margin-right: 10px;
+    /* Reduce el espacio entre las secciones */
+    margin-bottom: 10px;
+    /* Espacio inferior para los elementos en pantallas más pequeñas */
+}
+.social-icons {
+    display: flex;
+ 
+    justify-content: flex-start;
+    /* Alinear los íconos de redes sociales al inicio */
+    gap: 10px;
+    /* Espacio entre los íconos */
+}
+.dark-mode .social-icons a{
+    color: white;
+}
+.social-icons a {
+    display: flex;
+   
+    gap: 5px;
+    /* Espacio entre el ícono y el texto */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* Asegura que el texto sea blanco */
+}
+.social-icons img {
+    width: 24px;
+    /* Ancho deseado de los íconos */
+    height: 24px;
+    /* Altura deseada de los íconos */
+}
+.footer-logo {
+    width: 100px;
+    /* Tamaño más pequeño para el logo */
+    height: auto;
+
+}
+.footer-section:last-child {
+    flex: 100%;
+    /* Hacer que ocupe toda la fila */
+    text-align: center;
+    /* Alinear el último elemento al centro */
+    margin-top: 10px;
+    /* Espacio superior para separarlo del resto */
+    font-size: 12px;
+    /* Reduce el tamaño de la fuente del copyright */
+}
+
+
+
+.carrito-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.icono-carrito {
+    height: 30px;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+}
+
+.main-servicios {
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url("../img/fondoglobalclaro.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+
+/* Otros estilos permanecen igual */
+
+.carrito-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icono-carrito {
+    height: 30px;
+    cursor: pointer;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+}
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-option.selected {
+    border: 2px solid #ff0f0f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permitir el desplazamiento del contenido dentro del modal */
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ebe0e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: calc(100% - 40px); /* Ajustar el ancho máximo según sea necesario */
+    max-height: calc(100% - 40px); /* Ajustar la altura máxima según sea necesario */
+    overflow: auto; /* Permitir el desplazamiento del contenido dentro del modal */
+    text-align: left;
+}
+
+.dark-mode .modal-content{
+    background-color: #1d1c1c;
+    color: white;
+}
+.dark-mode .modal-content h2{
+    color: white;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+#cart-items {
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cart-item img {
+    width: 100px; /* Ajusta el tamaño de la imagen aquí */
+    margin-right: 15px;
+}
+
+#comprar-carrito {
+    padding: 10px 20px;
+    background-color: #5f5c58;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dark-mode .comprar-carrito{
+    background-color: #000;
+    color: white;
+}
+#comprar-carrito:hover {
+    background-color: #444;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 10px; /* Distancia desde el borde superior */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste para centrado horizontal */
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+    color: #000;
+}
+
+.dark-mode .section-title {
+    color: white;
+}
+
+/* Sección de Ofertas y Calzados Deportivos */
+.ofertas-section, .disponibles-section {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.calzado-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.calzado-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(173, 165, 165, 0.9);
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .calzado-item {
+    background-color: #332f2f;
+    color: aliceblue;
+}
+
+.calzado-item img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.calzado-details {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+.calzado-details p {
+    margin: 5px 0;
+}
+
+.precio-actual {
+    color: red; /* Color rojo */
+    text-decoration: line-through; /* Tachado */
+}
+
+.color-palette {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.comprar-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 200px;
+    font-size: 15px;
+}
+
+.dark-mode .comprar-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.comprar-btn:hover {
+    background-color: #444;
+}
+
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content form label {
+    margin: 10px 0 5px;
+}
+
+.modal-content form input,
+.modal-content form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-content form button {
+    padding: 10px 20px;
+    background-color: #5f5c58;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content form button:hover {
+    background-color: #444;
+}
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .menu-item button {
+    background-color: #333;
+    color: #fff;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ebe9e9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .container{
+    background-color: #121212;
+}
+
+.bio {
+    text-align: center;  margin-bottom: 20px; /* Espacio entre biografías */
+    padding-bottom: 20px; /* Espacio entre contenido y la línea */
+    border-bottom: 1px solid #000000; /* Línea separadora gris */
+}
+.dark-mode .bio{
+    color: white;
+    border-bottom-color: white; /* Cambia el color de la línea a blanco en modo oscuro */
+
+  
+}
+
+/* Opcional: Si quieres espacio adicional entre las biografías */
+.bio:last-child {
+    margin-bottom: 0; /* Evita espacio extra después de la última biografía */
+    padding-bottom: 0; /* Evita espacio extra después de la última biografía */
+    border-bottom: none; /* Quita el borde inferior de la última biografía */
+}
+
+.bio-header {
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 150px; /* Tamaño de la foto de perfil */
+    height: 150px;
+    border-radius: 50%; /* Para hacerla redonda */
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #000000; /* Borde blanco alrededor de la foto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+
+
+.dark-mode h1{
+color: white;
+}
+.dark-mode h2{
+    color: white;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.bio-content {
+    text-align: left;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.bio-content p {
+    margin-bottom: 10px;
+}
+
+.email-card {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+.dark-mode .email-card{
+    background-color: #000;
+    color: white;
+}
+.dark-mode .card-header{
+    color: white;
+}
+.card-header {
+    text-align: center;
+    color: #333;
+}
+
+.card-body {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="email"], textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+.dark-mode #b{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+#b {
+    background-color: #232324;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#b:hover {
+    background-color: #797979;
+}
+
+.loading, .success-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success-message p {
+    color: green;
+}
+
+#boton{
+    background-color: #000;
+    color: white;
+}
+.dark-mode #boton{
+    background-color: white;
+    color: #000;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    padding: 20px;
+    margin: 0 auto; /* Centrar la galería */
+    max-width: 1200px; /* Ancho máximo para la galería */
+}
+
+
+ 
+.thumbnail {
+    width: 130%;
+    height: 150px; /* Ajustar la altura de las miniaturas según sea necesario */
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Agrega transición para transformaciones y sombra */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0); /* Sombras inicialmente invisible */
+    position: relative;
+    z-index: 5; /* Asegura que las imágenes se superpongan al título */
+   
+
+
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añade sombra al pasar el cursor */
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+.close-button {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: rgb(63, 61, 61);
+}
+
+.main-deslizante {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black; /* Color de la flecha */
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: white; /* Fondo blanco */
+    border: 1px solid black; /* Borde negro */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #f0f0f0; /* Fondo ligeramente gris al pasar el cursor */
+}
+
+
+.main-mosaico {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centrar contenido horizontalmente */
+}
+
+.mosaic-gallery {
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas automáticas ajustables */
+    gap: 10px;
+    max-width: 1200px; /* Ancho máximo para limitar el tamaño de la cuadrícula */
+    width: 100%; /* Para asegurar que ocupe todo el ancho disponible */
+    padding: 0 20px; /* Añadir padding para separación del borde del main */
+ margin-bottom: 40px;
+}
+
+.mosaic-item {
+    overflow: hidden;
+}
+
+.mosaic-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mosaic-item:hover img {
+    transform: scale(1.1);
+}
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    padding: 20px;
+   
+}
+
+.image-list img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Agregar transición para un efecto suave */
+}
+
+.image-list img:hover {
+    transform: scale(1.1); /* Escalar la imagen al 110% cuando se pasa el cursor */
+}
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.fullscreen-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ddd;
+    width: 70px;
+}
