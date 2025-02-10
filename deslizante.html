@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&A</title>
+    <link rel="icon" href="img/logo.png" >
+    <link rel="stylesheet" href="css/style.css">
+  
+
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+            <div id="menu" class="menu">
+                <div class="menu-item" onclick="toggleImageOptions()">Galería de Imágenes</div>
+                <div id="imageOptions">
+                    <div class="image-option">
+                        <button onclick="loadPage('simple.html')"> Galeria simple</button>
+                    </div>
+                    <div class="image-option">
+                        <button  onclick="loadPage('deslizante.html')">Galeria Deslizante</button>
+                    </div>
+                    <div class="image-option">
+                        <button  onclick="loadPage('mosaico.html')">Galeria Mosaico</button>
+                    </div>
+                    <div class="image-option">
+                        <button  onclick="loadPage('luz.html')">Galeria efecto luz</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" onclick="loadPage('item2.html')">Tienda</div>
+                <div class="menu-item" onclick="loadPage('item3.html')">Sugerencias</div>
+                <div class="menu-item" onclick="loadPage('item4.html')">Biografía</div>
+                <div class="menu-item">
+                    <button id="mode-toggle" onclick="toggleMode()">Modo Oscuro</button>
+                </div>
+            </div>
+        </nav>
+      <div class="titulo"><h1>NUESTRAS TIENDAS</h1></div>
+        <div class="logo">
+            <a href="INICIO.html">
+                <div class="logo header-logo">
+                    <img src="img/logo.png" alt="Logo">
+            </a>
+        </div>
+        
+    </header>
+    <main class="main-deslizante">
+    
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="img/t3.jpg" alt="Imagen 1"></div>
+                <div class="slide"><img src="img/t2.jpg" alt="Imagen 2"></div>
+                <div class="slide"><img src="img/t1.jpg" alt="Imagen 3"></div>
+                <!-- Añade más imágenes según sea necesario -->
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </main>
+    
+       
+  
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section logo">
+                <a href="INICIO.html">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo">
+                </a>
+            </div>
+            <div class="footer-section">
+                <a href="item3.html"><h3>"REALIZAR CONSULTAS"</h3></a>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <div class="social-icons">
+                    <a href="#"><img src="img/facebook.jpeg" alt="Facebook"><span>A&A</span></a>
+                    <a href="#"><img src="img/ins.jpeg" alt="Instagram"><span>A&Asport06</span></a>
+                    <a href="#"><img src="img/wasapi.jpg" alt="Whatsapp"><span>0985_789_097</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p><a href="mailto:TiendssportA&A.com">@TiendaportA&A.com</a></p>
+                <p>Tel: 222-613</p>
+        
+            </div>
+            <div class="footer-section copyright">
+                <span>&copy; 2024 A&A. Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="js/script.js"></script>
+    
+
+</body>
+</html>
+
+
